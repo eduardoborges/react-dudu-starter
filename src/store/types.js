@@ -1,3 +1,4 @@
+/* eslint-disable flowtype/no-types-missing-file-annotation */
 export type Todo = {
   id: number,
   name: string,

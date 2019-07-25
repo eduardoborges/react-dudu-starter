@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import Welcome from '~/screens/welcome';
+import Welcome from './screens/welcome';
 
 export default function AppRoutes() {
   return (

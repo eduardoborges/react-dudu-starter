@@ -1,11 +1,12 @@
+/* eslint-disable import/no-extraneous-dependencies */
 // @flow
 
-import React from "react";
-import { hot } from "react-hot-loader";
-import { Provider } from "unistore/react";
+import React from 'react';
+import { hot } from 'react-hot-loader/root';
+import { Provider } from 'unistore/react';
 
-import store from "./store";
-import AppRoutes from "./routes";
+import store from './store';
+import AppRoutes from './routes';
 
 function App() {
   return (
@@ -17,4 +18,4 @@ function App() {
   );
 }
 
-export default hot(module)(App);
+export default hot(App);

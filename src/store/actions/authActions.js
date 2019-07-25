@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 // @flow
 
-import type { State, Store } from "../types";
+import type { State, Store } from '../types';
 
 type Credentials = {
   email: string,
@@ -27,7 +27,7 @@ const actions = (store: Store) => ({
   //
   async refreshToken(state: State) {
     return state;
-  }
+  },
 });
 
 export default actions;

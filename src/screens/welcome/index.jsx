@@ -6,10 +6,11 @@ import { connect } from 'unistore/react';
 import { todoActions } from '~/store/actions';
 import { State } from '~/store/types';
 
-const mapStateToProps = state => ({ state });
+const mapStateToProps = ({ TODO }) => ({ TODO });
 
 function WelcomeScreen(props) {
-  const { TODO }: State = props.state;
+  const state: State = props;
+  const { TODO } = state;
 
   const [todo, setTodo] = useState('');
 
@@ -24,7 +25,6 @@ function WelcomeScreen(props) {
   };
 
   const handleRemove = async (todoId) => {
-    //
     await props.remove(todoId);
   };
 
@@ -52,33 +52,31 @@ function WelcomeScreen(props) {
                     className="input"
                     value={todo}
                     onChange={e => setTodo(e.target.value)}
+                    minLength={5}
+                    required
                   />
                 </div>
               </div>
             </div>
             <div className="column">
-              <button className="button is-dark">Adicionar</button>
+              <button type="submit" className="button is-dark">Adicionar</button>
             </div>
           </form>
           {/*  */}
 
           <div className="columns">
             <div className="column">
-              {TODO.data.map(todo => (
-                <li key={todo.id}>
+              {TODO.data.map(item => (
+                <li key={item.id}>
                   <input
                     type="checkbox"
-                    defaultChecked={todo.isDone}
-                    onChange={e => setMarked(e.target.checked, todo.id)}
+                    defaultChecked={item.isDone}
+                    onChange={e => setMarked(e.target.checked, item.id)}
                   />
-                  {' '}
-                  <span
-                    style={{ textDecoration: todo.isDone && 'line-through' }}
-                  >
-                    {todo.name}
+                  <span style={{ textDecoration: item.isDone && 'line-through', margin: '0 10px' }}>
+                    {item.name}
                   </span>
-                  {' '}
-                  <a onClick={() => handleRemove(todo.id)}>Remove</a>
+                  <button type="button" onClick={() => handleRemove(item.id)}>Remove</button>
                 </li>
               ))}
             </div>

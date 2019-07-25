@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 // @flow
 
-import type { State, Store, Todo } from "../types";
+import type { State, Store, Todo } from '../types';
 
 const actions = (store: Store) => ({
   //
@@ -11,8 +11,8 @@ const actions = (store: Store) => ({
       TODO: {
         ...TODO,
         data: [...TODO.data, todo],
-        isLoading: false
-      }
+        isLoading: false,
+      },
     };
   },
 
@@ -23,8 +23,8 @@ const actions = (store: Store) => ({
       TODO: {
         ...TODO,
         data: [...TODO.data.filter(item => item.id !== todoId)],
-        isLoading: false
-      }
+        isLoading: false,
+      },
     };
   },
 
@@ -35,17 +35,17 @@ const actions = (store: Store) => ({
       TODO: {
         ...TODO,
         data: [
-          ...TODO.data.map(item => {
+          ...TODO.data.map((item) => {
             if (todoId === item.id) {
-              item.isDone = isDone;
+              return { ...item, isDone };
             }
             return item;
-          })
+          }),
         ],
-        isLoading: false
-      }
+        isLoading: false,
+      },
     };
-  }
+  },
 });
 
 export default actions;
