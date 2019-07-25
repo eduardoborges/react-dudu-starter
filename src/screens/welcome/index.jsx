@@ -1,34 +1,34 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 // @flow
-import React, { useState } from "react";
-import { connect } from "unistore/react";
-import { todoActions } from "~/store/actions";
-import { State } from "~/store/types";
+import React, { useState } from 'react';
+import { connect } from 'unistore/react';
+import { todoActions } from '~/store/actions';
+import { State } from '~/store/types';
 
 const mapStateToProps = state => ({ state });
 
 function WelcomeScreen(props) {
   const { TODO }: State = props.state;
 
-  const [todo, setTodo] = useState("");
+  const [todo, setTodo] = useState('');
 
-  const handleAdd = async e => {
+  const handleAdd = async (e) => {
     e.preventDefault();
     props.add({
       id: Date.now(),
       name: todo,
-      isDone: false
+      isDone: false,
     });
-    setTodo("");
+    setTodo('');
   };
 
-  const handleRemove = async todoId => {
+  const handleRemove = async (todoId) => {
     //
     await props.remove(todoId);
   };
 
   const setMarked = async (isDone, todoId) => {
-    //
     props.setDone(isDone, todoId);
   };
 
@@ -46,7 +46,7 @@ function WelcomeScreen(props) {
           <form className="columns" onSubmit={handleAdd}>
             <div className="column">
               <div className="field">
-                <div className={`control ${TODO.isLoading && "is-loading"}`}>
+                <div className={`control ${TODO.isLoading && 'is-loading'}`}>
                   <input
                     type="text"
                     className="input"
@@ -70,12 +70,14 @@ function WelcomeScreen(props) {
                     type="checkbox"
                     defaultChecked={todo.isDone}
                     onChange={e => setMarked(e.target.checked, todo.id)}
-                  />{" "}
+                  />
+                  {' '}
                   <span
-                    style={{ textDecoration: todo.isDone && "line-through" }}
+                    style={{ textDecoration: todo.isDone && 'line-through' }}
                   >
                     {todo.name}
-                  </span>{" "}
+                  </span>
+                  {' '}
                   <a onClick={() => handleRemove(todo.id)}>Remove</a>
                 </li>
               ))}
@@ -89,5 +91,5 @@ function WelcomeScreen(props) {
 
 export default connect(
   mapStateToProps,
-  todoActions
+  todoActions,
 )(WelcomeScreen);
