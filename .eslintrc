@@ -5,8 +5,9 @@
   },
   "parser": "babel-eslint",
   "extends": [
+    "prettier",
     "airbnb",
-    "plugin:flowtype/recommended"
+    "plugin:flowtype/recommended",
   ],
   "globals": {
     "Atomics": "readonly",
@@ -24,8 +25,27 @@
     "flowtype"
   ],
   "rules": {
-    "flow-vars/define-flow-type": 1,
-    "flow-vars/use-flow-type": 1
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
+    "import/prefer-default-export": "off",
+    "no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "react/jsx-one-expression-per-line": "off",
+    "react-native/no-color-literals": "off",
+    "react-native/sort-styles": "off",
+    "global-require": "off",
+    "react-native/no-raw-text": "off"
   },
   "settings": {
     "import/resolver": {
