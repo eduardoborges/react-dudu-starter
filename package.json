@@ -10,7 +10,8 @@
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
     "unissist": "^1.4.0",
-    "unistore": "^3.4.1"
+    "unistore": "^3.4.1",
+    "lodash": "^4.17.15"
   },
   "scripts": {
     "start": "react-app-rewired start",
