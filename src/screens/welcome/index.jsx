@@ -43,7 +43,7 @@ function WelcomeScreen(props) {
 
           <br />
 
-          <form className="columns" onSubmit={handleAdd}>
+          <form className="columns is-mobile" onSubmit={handleAdd}>
             <div className="column">
               <div className="field">
                 <div className={`control ${TODO.isLoading && 'is-loading'}`}>
@@ -58,8 +58,8 @@ function WelcomeScreen(props) {
                 </div>
               </div>
             </div>
-            <div className="column">
-              <button type="submit" className="button is-dark">Adicionar</button>
+            <div className="column is-4">
+              <button type="submit" className="button is-dark is-fullwidth">Adicionar</button>
             </div>
           </form>
           {/*  */}
