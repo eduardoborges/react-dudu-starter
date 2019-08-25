@@ -4,12 +4,5 @@
   ],
   "plugins": [
     "react-hot-loader/babel",
-    [
-      "babel-plugin-root-import",
-      {
-        "rootPathSuffix": "./src",
-        "rootPathPrefix": "~/"
-      }
-    ]
   ]
 }
