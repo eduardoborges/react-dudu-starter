@@ -10,7 +10,7 @@
     "react-dom": "^16.9.0",
     "react-hot-loader": "^4.12.11",
     "typescript": "3.3.4000",
-    "unistore": "github:eduardoborges/unistore#master"
+    "unistore": "^3.4.1"
   },
   "scripts": {
     "start": "react-app-rewired start",
