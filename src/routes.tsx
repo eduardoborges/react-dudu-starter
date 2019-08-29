@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { Router } from '@reach/router';
 
-import Login from './screens/login';
+import Welcome from './screens/welcome';
 
 export default () => (
   <Router>
-    <Login path="/" />
+    <Welcome path="/" />
   </Router>
 );
