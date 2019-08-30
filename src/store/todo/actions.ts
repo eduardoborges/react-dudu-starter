@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
-import { Store } from 'unistore';
+import { Store, ActionCreator } from 'unistore';
 import { AppState } from '../index';
 import { Todo } from './types';
 
-export default (store:Store<AppState>) => ({
+const actions : ActionCreator<AppState> = (store:Store<AppState>) => ({
     addTodo: (state: AppState, todoValue: string) => ({
       TODOS: {
         ...state.TODOS,
@@ -30,3 +30,6 @@ export default (store:Store<AppState>) => ({
 
 
 });
+
+
+export default actions;
