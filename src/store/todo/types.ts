@@ -6,6 +6,12 @@ export interface TodoState {
   error: boolean,
 }
 
+export interface TodoActions {
+  addTodo(todoValue:string | undefined): void,
+  toggleTodo(todo:Todo): void,
+  removeTodo(todo:Todo): void,
+}
+
 export interface Todo {
   id: number,
   name: string,
