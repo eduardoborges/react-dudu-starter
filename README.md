@@ -22,6 +22,7 @@ React Dudu Starter is a TypeScript React Starter Kit based on the Atomic Design 
 
 
 <hr>
+
 Contributions, issues and feature requests are welcome! Feel free to check [issues page](https://github.com/eduardoborges/react-dudu-starter/issues).
 <hr>
 
