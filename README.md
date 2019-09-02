@@ -1,13 +1,14 @@
 
-<p style="text-align: center !important">
+<p align="center">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" width="200" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" width="200" align="center" /><br><br>
 
-# React Dudu Starter Kit 👋
-![Version](https://img.shields.io/badge/version-3.2.1-blue.svg?cacheSeconds=2592000)
-[![Twitter: euduardoborges](https://img.shields.io/twitter/follow/euduardoborges.svg?style=social)](https://twitter.com/euduardoborges)
+<img src="https://img.shields.io/badge/version-3.2.1-blue.svg?cacheSeconds=2592000">
+<a href="https://twitter.com/euduardoborges"><img src="https://img.shields.io/twitter/follow/euduardoborges.svg?style=social"/></a>
 
 </p>
+
+# React Dudu Starte Kit
 
 React Dudu Starter is a TypeScript React Starter Kit based on the Atomic Design methdology. Build using some cool things:
 
