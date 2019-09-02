@@ -1,14 +1,13 @@
 
-<p align="center">
+<p style="text-align: center !important">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" width="200" align="center" /><br><br>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" width="200" />
 
-<img src="https://img.shields.io/badge/version-3.2.1-blue.svg?cacheSeconds=2592000">
-<a href="https://twitter.com/euduardoborges"><img src="https://img.shields.io/twitter/follow/euduardoborges.svg?style=social"/></a>
+# React Dudu Starter Kit 👋
+![Version](https://img.shields.io/badge/version-3.2.1-blue.svg?cacheSeconds=2592000)
+[![Twitter: euduardoborges](https://img.shields.io/twitter/follow/euduardoborges.svg?style=social)](https://twitter.com/euduardoborges)
 
 </p>
-
-# React Dudu Starte Kit
 
 React Dudu Starter is a TypeScript React Starter Kit based on the Atomic Design methdology. Build using some cool things:
 
@@ -29,48 +28,11 @@ Contributions, issues and feature requests are welcome! Feel free to check [issu
 ## Scripts
 
 ```sh
-npm install # to install deps
-npm run start # to run in dev mode
-npm run build # to build for prod
-npm run test # to run tests
+npm install     # to install deps
+npm run start   # to run in dev mode
+npm run build   # to build for prod
+npm run test    # to run tests
 ```
-
-## Project Structure
-
-```
-src
-├── App.tsx
-├── __tests__
-│   └── WelcomeScreen.test.tsx
-├── assets
-│   ├── fonts
-│   └── styles
-│       ├── index.scss
-│       ├── overrides.scss
-│       └── variables.scss
-├── components
-│   ├── Title
-│   │   └── index.tsx
-│   └── index.ts
-├── index.tsx
-├── react-app-env.d.ts
-├── routes.tsx
-├── screens
-│   └── welcome
-│       └── index.tsx
-├── services
-│   ├── api.ts
-│   └── index.ts
-└── store
-    ├── index.ts
-    ├── todo
-    │   ├── actions.ts
-    │   └── types.ts
-    └── unistore.d.ts
-
-11 directories, 17 files
-```
-
 
 ## Author
 
