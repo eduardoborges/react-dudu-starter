@@ -4,7 +4,7 @@ import { Store, ActionCreator } from 'unistore';
 import { AppState } from '../index';
 import { Todo } from './types';
 
-const actions : ActionCreator<AppState> = (store:Store<AppState>) => ({
+const actions = (store:Store<AppState>) => ({
     addTodo: (state: AppState, todoValue: string) => ({
       TODOS: {
         ...state.TODOS,
